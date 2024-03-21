@@ -1,95 +1,61 @@
 import React from "react";
 import Signup from "./Signup";
-import inter from "../assest/image/reinter.png";
+import anchor from "../assest/image/anchor.ico";
 import { Link } from "react-router-dom";
+import { useId } from "react";
 const NavBar = () => {
+  const id = useId();
   return (
     <>
-      <div className="container" style={{ marginLeft: "-22px" }}>
-        <nav className="navbar navbar-expand-lg bg-white ">
-          <div className="container-fluid">
-            <a className="navbar-brand" style={{ marginLeft: "11vw" }} href="#">
-              <img
-                src="https://www.interswitchgroup.com/assets/images/home/interswitch_logo.svg"
-                style={{ width: "150px" }}
-                className="img-responsive img-fluid"
-              />
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon top-bar"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav ms-4 ">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page">
-                    About
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    What We do
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Financial Inclusion
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Corporate Responsibility
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    News & insight
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <Link to={"/contact"}>
-                    <a
-                      className="nav-link"
-                      style={{ textDecoration: "none ! important" }}
-                      href="#"
-                    >
-                      contact
-                    </a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
+      <nav className="navbar navbar-expand-lg bg-light fixed-top shadow p-0 m-0">
+        <div class="container-fluid">
+          <a className="logo navbar-brand scrollto" href="/">
+            <span className="logo-icon-wrapper mx-2">
+              <img className="logo-icon" src={anchor} style={{width:"80px", height:"70px"}} alt="AUL" />
+            </span>
+            <span className="text">
+              <span className="highlight">AUL </span>ACCOMMODATION
+            </span>
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarText">
+              
+            <ul className=" navbar-nav ms-auto">
+              <li className="nav-item">
+                <a className="nav-link scrollto" href="#testimonials">
+                  Guide
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link scrollto" href="#pricing">
+                  Pricing
+                </a>
+              </li>
+             
+             <Link to={"/Signin"}> <a
+                className="btn btn-primary w-100"
+                style={{ fontSize: "16px", color: "white",  margin:"opx 20px" }}
+                
+              >
+                LOGIN
+              </a></Link>
+
+              
+            </ul>
           </div>
-        </nav>
-      </div>
-      <div
-        className="container-fluid"
-        style={{ backgroundColor: "#18425d", height: "8vh" }}
-      >
-        <div className="container">
-          <nav className="navbar py-3" style={{ marginLeft: "3vw" }}>
-            <div className="container-fluid">
-              <span className="navbar-text">
-                <h6 className="text-white fs-4">Quickteller</h6>
-              </span>
-              <span>
-                <p className="text-white">
-                  Interested? <span className="fw-bold">Get Started</span>
-                </p>
-              </span>
-            </div>
-          </nav>
         </div>
-      </div>
+      </nav>
     </>
   );
 };
-
 export default NavBar;

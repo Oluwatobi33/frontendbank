@@ -1,15 +1,26 @@
 import React from 'react'
+import { useEffect, useState } from "react";
+
+// import './animation.css'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 // import check from '../assets/vendor/icofont/icofont.min.css'
 const ExistingCust = () => {
+    useEffect(() => {
+        AOS.init({ duration: 8000 })
+    }, []);
+
     return (
         <>
             <div className='container'>
                 <div className="row">
                     <div className="col-md-4 ">
-                        <div className="circle">
-                            <img src="https://www.interswitchgroup.com/assets/images/consumer/ease-of-use.svg" className="img-responsive float-start" style={{ width: "4vw" }} alt="..." />
+                        <div className="circle" data-aos="zoom-in">
+                            {/* <img src="https://www.interswitchgroup.com/assets/images/consumer/ease-of-use.svg" className="img-responsive float-start" style={{ width: "4vw" }} alt="..." /> */}
                             <div className=" custom float-start">
-                                <h3 className='card-title text-sm-start ms-4'>Existing Customers</h3>
+                                <div class="price-figure">
+                                    <span class="number">₦60,000</span>
+                                </div>
                                 <ul className="card-text list ">
                                     <li className='text-md-start'><i className='icofont-check'></i>One-time registration feature</li>
                                     <li className='text-md-start'><i className='icofont-check'></i>User friendly Interface</li>
@@ -19,7 +30,7 @@ const ExistingCust = () => {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <div className="circle1" >
+                        <div className="circle1" data-aos="zoom-in" >
                             <img src="https://www.interswitchgroup.com/assets/images/consumer/friendly.svg" className="img-responsive float-start" style={{ width: "4vw" }} alt="..." />
                             <div className="custom float-start">
                                 <h3 className='card-title text-md-start ms-4'>Ease of Use</h3>
@@ -33,7 +44,7 @@ const ExistingCust = () => {
                         </div>
                     </div>
                     <div className="col-md-4">
-                        <div className="circle3">
+                        <div className="circle3" data-aos="zoom-in">
                             <img src="https://www.interswitchgroup.com/assets/images/consumer/secured.svg" className="img-responsive img-fluid float-start" style={{ width: "4vw" }} />
                             <div className='custom float-start mt-4'>
                                 <h3 className='card-title text-md-start'>Customer Friendly</h3>

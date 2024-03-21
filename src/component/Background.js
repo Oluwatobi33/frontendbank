@@ -1,37 +1,38 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const Background = () => {
-    return (
-        <>
-            <section className="Section3">
-                <div className="container py-5">
-                    <div className="row justify-content-start">
-                        <div className="col-md-5 ms-2">
-                            <h1 className="text-white fw-bold float-start">Quickteller</h1>
-                            <p
-                                className="text-start text-white float-start"
-                                style={{ fontSize: "16px" }}
-                            >
-                                Digital hub connecting people to seamless payments, global
-                                shopping, flights and more..
-                            </p>
-                            <button
-                                className="btn btn-lg text-white float-start mb-3"
-                                style={{ background: "#479fc8", fontSize: "14px" }}
-                            >
-                                <Link
-                                    to="/signup"
-                                    style={{ textDecoration: "none", color: "white" }}
-                                >
-                                    Sign up on Quickteller
-                                </Link>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
-    );
+  return (
+    <>
+      <section className="Section3">
+        <div className="container py-5">
+          <div className="row">
+            <div className="col-md-5 univer">
+              <h2 className="text-white fw-bold float-start">
+                Anchor University
+                <br className="d-none d-md-block" />
+                Accommodation Booking
+                <br /> System
+              </h2>
+              <p className="text-white float-start para">
+                On-campus housing is more than just a place to live while
+                studying at Anchor University. You'll be engaged through unique
+                programs and oppurtunities that emphasize academic, spiritual
+                and social growth.
+              </p>
+             
+                <Link
+                  to="/signup" className="float-start signup "
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Book Now
+                </Link>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default Background;
