@@ -16,8 +16,8 @@ const Forget = () => {
         validationSchema: yup.object({
             Email: yup.string()
                 .required("This is field is required").email("must be a valid Email"),
-        })
-    })
+        }),
+    });
     return (
         <>
             <NavBar />

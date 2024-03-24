@@ -108,55 +108,107 @@ const Signup = () => {
     return (
         <>
             <NavBar />
-            <div className="container">
-                <div className="row py-5">
-                    <div className="col-md-6 col-sm-6">
-                        <div className="row">
-                            <div className="text-center">
-                                <img src="https://www.interswitchgroup.com/assets/images/home/interswitch_logo.svg" style={{ width: '300px', marginBottom: "11px" }} className='img-responsive img-fluid' />
-                                <h4 style={{ color: "black" }}>Create an account</h4>
+            <form>
+                <div className="container" style={{marginTop:"120px"}}>
+                    <div className="row justify-content-center"  >
+                        <div className="col-md-8 border border-3 mb-3">
+                            <h2 className="text-center text-dark">Create New Account</h2>
+                            <div className="row ">
+                                <div className="col-md-4 py-3">
+                                    <label for="firstName" className="form-label">First name</label>
+                                    <input type="text" className="form-control" id="firstName" placeholder="" value="" required="" />
+                                    <div className="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div className="col-md-4 py-3">
+                                    <label for="lastName" className="form-label">Last name</label>
+                                    <input type="text" className="form-control" id="lastName" placeholder="" value="" required="" />
+                                    <div className="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                                <div className="col-md-4 py-3">
+                                    <label for="lastName" className="form-label">Other name</label>
+                                    <input type="text" className="form-control" id="other name" placeholder="" value="" required="" />
+                                    <div className="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="row">
+                                <div className="col-md-6 py-3">
+                                    <label for="country" className="form-label">Gender</label>
+                                    <select className="form-select" id="country" required="">
+                                        <option value="">Choose...</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+                                <div className="col-md-6 py-3">
+                                    <label for="country" className="form-label">User Type</label>
+                                    <select className="form-select" id="country" required="">
+                                        <option value="">Choose...</option>
+                                        <option>Undergraduate</option>
+                                        <option>Postraduate</option>
+                                        <option>Topup</option>
+                                        <option>Jupeb</option>
+                                        <option>Others</option>
+                                    </select>
+                                    <div className="invalid-feedback">
+                                        Please select a valid country.
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12 py-3">
+                                    <label for="email" className="form-label">Email <span className="text-body-secondary">(Optional)</span></label>
+                                    <input type="email" className="form-control" id="email" placeholder="you@example.com" />
+                                    <div className="invalid-feedback">
+                                        Please enter a valid email address for shipping updates.
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12 py-3">
+                                    <label for="address" className="form-label">Application No</label>
+                                    <input type="text" className="form-control" id="address" placeholder="1234 Main St" required="" />
+                                </div>
+                                <div className="col-md-12 py-3">
+                                    <label for="address2" className="form-label">Matric No/Jupeb No</label>
+                                    <input type="text" className="form-control" id="address2" />
+                                </div>
+                                <div className="col-md-12 py-3">
+                                    <label for="address2" className="form-label">Email</label>
+                                    <input type="email" className="form-control" id="address2" />
+                                </div>
+                                <div className="col-md-12 py-3">
+                                    <label for="address2" className="form-label"> Re-enter Email</label>
+                                    <input type="email" className="form-control" id="address2" />
+                                </div>
+                                <div className="col-md-12 py-3">
+                                    <label for="address2" className="form-label">Password</label>
+                                    <input type="password" className="form-control" id="address2" />
+                                </div>
+                                <div className="col-md-12 py-3">
+                                    <label for="address2" className="form-label">Confirm Password</label>
+                                    <input type="password" className="form-control" id="address2" />
+                                </div>
+                                <div className="col-md-12 py-3">
+                                    <label for="address2" className="form-label">Current Level</label>
+                                    <input type="password" className="form-control" id="address2" />
+                                </div>
+                                <center>
+                                    <div className="btn-group col-md-6 container py-2">
+                                        <button className="btn btn-primary active submitBtn shadow-none">Register</button>
+                                    </div>
+                                </center>
                             </div>
                         </div>
-                        <form action="" onSubmit={formik.handleSubmit} autoComplete="off">
-                            <div className="row">
-                                <p className={Error == "" ? "" : "alert alert-danger"}>{Error}</p>
-                                <p className={allUsers == "" ? "" : "alert alert-success"}>{allUsers}</p>
-                                <div className="col-md-12 ">
-                                    <input type="text" className=" inp" name="Fullname" onChange={formik.handleChange} placeholder="Enter Your FullName" />
-                                    <div className='text-danger who'>{formik.errors.Fullname}</div>
-                                </div>
-                            </div>
-                            <div className="row justifty-content-center text-center my-3">
-                                <div className="col-md-6 ">
-                                    <input type="email" className="inp" name="Email" onChange={formik.handleChange} placeholder="Email" />
-                                    <div className='text-danger who'>{formik.errors.Email}</div>
-                                </div>
-                                <div className="col-md-6 ">
-                                    <input type="password" className="inp" name="Password" onChange={formik.handleChange} placeholder="Password" />
-                                    <div className='text-danger who'>{formik.errors.Password}</div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-md-6 ">
-                                    <input type="number" className="inp" name="PhoneNumber" onChange={formik.handleChange} placeholder="PhoneNumber" />
-                                    <div className='text-danger who'>{formik.errors.PhoneNumber}</div>
-                                </div>
-                                <div className="col-md-6">
-                                    <input type="password" className="inp" max={4} name="Pin" onChange={formik.handleChange} placeholder="pin" />
-                                    <div className='text-danger who'>{formik.errors.Pin}</div>
-                                </div>
-                            </div>
-                            <center>
-                                <button type="submit" className="btn  btn-lg btn-primary mt-4 fst-italic" disabled={isloading} style={{ background: " #00425f;" }}>{isloading ? " Processing... " : "Signup"}</button>
-                                <p className="text-dark h4">Already Have an Account?<Link to='/signin' className="px-3 fs-4 fst-italic">SIGNIN</Link></p>
-                            </center>
-                        </form>
-                    </div>
-                    <div className="col-md-6 col-sm-6">
-                        <img src={register} className='img-responsive img-fluid' />
                     </div>
                 </div>
-            </div >
+            </form >
         </>
     );
 };

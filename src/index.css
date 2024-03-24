@@ -6,9 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h2 {
+/* h2 {
   background-color: red;
-}
+} */
 .first{
   color: yellow;
 }

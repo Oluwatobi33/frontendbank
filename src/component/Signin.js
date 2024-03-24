@@ -67,35 +67,69 @@ const Signin = () => {
         <>
             <NavBar />
             <div className="container mt-5">
-                <div className="row justify-content-center">
-                    <div className='text-center col-md-4'>
-                        <img src="https://www.interswitchgroup.com/assets/images/home/interswitch_logo.svg" style={{ width: '200px', marginBottom: "11px" }} className='img-responsive img-fluid' />
-                        <h4 style={{ color: "#18425d" }} className='h3'>Welcome To Our Career Page</h4>
-                        <p className='text-dark h1'>Login Page</p>
+                <div className="row">
+                    <div className="col-md-7 mt-5">
+                        <h1 className="spg">Anchor University Accomodation</h1>
+                        <div className="inot">
+                            Important Notice
+                        </div>
+                        <hr />
+                        <br />
+                        <ul className="listpg">
+                            <li>Registered users should login with their <b>Email Address</b></li>
+                        </ul>
+                    </div>
+                    <div className="col-md-5 mt-5">
+                        {/* <div className="auth-wrapper d-flex no-block justify-content-center align-items-center">
+                            <div className="auth-box p-4 bg-white rounded m-0">
+                                <div id="loginform"> */}
+
+                        <div className="row">
+                            {/* <div className="col-md-12"> */}
+                            <h1>Sign In</h1>
+                            <form method="post" className="form-horizontal mt-3 form-material" action="/auth/login-user" novalidate="" autocomplete="off">
+                                <input type="hidden" name="csrfmiddlewaretoken" value="TbY1TwkoQCDlPjMN33LMxs5OWUnsBEMFUYlyR3IPDPOIRn90Hb2qMdB15Gg4VFE4" />
+                                <div className="messages">
+                                    {/* <div className="alert alert-sm alert-danger">
+                                                        Your credentials do not match our records
+                                                    </div> */}
+                                </div>
+                                <div className="form-group mb-3">
+                                    <div className="col-md-12">
+                                        <input type="text" className="form-control shadow-none w-100" placeholder="Email" name="username" value="" /> </div>
+                                </div>
+                                <div className="form-group mb-3">
+                                    <div className="col-md-12">
+                                        <input type="password" name="pw" className="form-control shadow-none w-100" placeholder="Password" /> </div>
+                                </div>
+                                <div className="form-group text-center mt-3">
+                                    <div className="col-md-12">
+                                        <button className="btn btn-info  btn-block text-uppercase waves-effect waves-light w-100 rounded rounded-1" type="submit">Log In</button>
+                                    </div>
+                                </div>
+                                <p className="text-danger text-center"></p>
+                                <div className="form-group">
+                                    <div className="d-flex">
+                                        <div className="checkbox checkbox-info float-left pt-0">
+                                        </div>
+                                        <div className="ml-auto mt-2">
+                                            <a href="/auth/register" id="to-recover" className="float-start fp mx-5"><i className="fa fa-user mr-1"></i> Register Here</a>
+                                        </div>
+                                        <div className="ml-auto mt-2">
+                                            <a href="javascript:void(0)" id="to-recover" className="float-right fp mx-5"><i className="fa fa-lock mr-1"></i> Forgot password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="form-group mb-0">
+                                    <div className="col-sm-12 justify-content-center d-flex">
+                                        <p> <a className="ish" href="https://helpdesk.aul.edu.ng/" target="_blank">Having Issues? visit the helpdesk</a></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <form onSubmit={formik.handleSubmit}>
-                    <div className="row justify-content-center my-3">
-                        <div className="col-md-8 col-sm-6 my-3">
-                            <div className="row justify-content-center">
-                                <div className="col-md-6 text-center my-3">
-                                    <p className={value ? 'alert alert-danger' : ""}>{value}</p>
-                                    <input type="text" className="inp" name='Email' placeholder="Email" onChange={formik.handleChange} />
-                                    <div className='text-danger who'>{formik.errors.Email}</div>
-                                    <input type="password" className="inp" name='Password' placeholder="Password" onChange={formik.handleChange} />
-                                    <Link to="/Forget"><a href="#" className=' text-decoration-none float-end my-2 h5'>Forget Password</a></Link>
-                                    <div className='text-danger who my-3'>{formik.errors.Password}</div>
-                                    <button type='submit' className='btn py-2 px-5 float-start ' disabled={isloading} style={{ background: " #00425f", color: "white", fontSize: "19px" }}>{isloading ? " Processing... " : "Signin"}</button>
-                                    <p className='text-secondary h6'>Don't have an account yet?  <Link to='/Signup'><span>Signup</span></Link></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 col-sm-6">
-                            <img src={img1} className='img-responsive img-fluid w-300' />
-                        </div>
-                    </div>
-                </form>
-            </div >
+            </div>
         </>
     )
 }
